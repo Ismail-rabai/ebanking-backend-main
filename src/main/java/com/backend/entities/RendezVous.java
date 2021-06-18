@@ -22,6 +22,7 @@ public @Data class RendezVous {
     private Date date2; //?
     private String objet;
     private String commentaire;
+    private boolean confirmed= false;
 
     @JsonIgnore
     @OneToOne(cascade=CascadeType.ALL)

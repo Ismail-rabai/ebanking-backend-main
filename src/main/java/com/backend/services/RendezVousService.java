@@ -21,9 +21,6 @@ public class RendezVousService {
     public List<RendezVous> findAll() {
         return rendezVousRepository.findAll();
     }
-    public Optional<RendezVous> findById(Long id){
-        return rendezVousRepository.findById(id);
-    }
     public void addRendezVous(RendezVous s) {
         Client tmp = clientService.getByUsername(s.getClients().getUsername());
         if(tmp!= null) {
@@ -35,6 +32,15 @@ public class RendezVousService {
     }
     public void deleteById(Long aLong) {
         rendezVousRepository.deleteById(aLong);
+    }
+    public void confirmRendezVous(RendezVous s){
+       s.setConfirmed(true);
+       rendezVousRepository.save(s);
+
+    }
+
+    public Optional<RendezVous> findById(Long id) {
+        return rendezVousRepository.findById(id);
     }
 
 }
