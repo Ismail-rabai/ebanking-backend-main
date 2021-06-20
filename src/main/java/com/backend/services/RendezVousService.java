@@ -27,15 +27,15 @@ public class RendezVousService {
             if (s.getDate1()!=s.getDate2() && !s.getDate1().equals(LocalDateTime.now()) && s.getDate2().after(s.getDate1())) {
                 s.setDt(LocalDateTime.now());
                 rendezVousRepository.save(s);
-            }
+           }
         }
     }
     public void deleteById(Long aLong) {
         rendezVousRepository.deleteById(aLong);
     }
     public void confirmRendezVous(RendezVous s){
-       s.setConfirmed(true);
-       rendezVousRepository.save(s);
+        s.setConfirmed(true);
+        rendezVousRepository.save(s);
 
     }
 

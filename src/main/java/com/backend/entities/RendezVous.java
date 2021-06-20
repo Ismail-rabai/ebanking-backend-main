@@ -8,27 +8,24 @@ import java.time.LocalDateTime;
 import java.util.Date;
 
 
-
 @Entity
-@Table(name="RENDEZVOUS")
-public @Data class RendezVous {
+@Table(name = "RENDEZVOUS")
+public @Data
+class RendezVous {
     @Id
-    @GeneratedValue(strategy= GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     Long id;
 
     private LocalDateTime dt;
 
     private Date date1;
-    private Date date2; //?
+    private Date date2;
     private String objet;
     private String commentaire;
-    private boolean confirmed= false;
+    private boolean confirmed = false;
 
-    @JsonIgnore
-    @OneToOne(cascade=CascadeType.ALL)
+    @OneToOne(mappedBy = "rendezVous")
     Client clients;
-
-    @JsonIgnore
     @ManyToOne
     Agent agent;
 

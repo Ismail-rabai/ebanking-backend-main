@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
+    <data-source source="LOCAL" name="ensadb@localhost" uuid="6e8ce5ac-30c4-4455-96fd-6623452ad741">
+      <driver-ref>mariadb</driver-ref>
+      <synchronize>true</synchronize>
+      <jdbc-driver>org.mariadb.jdbc.Driver</jdbc-driver>
+      <jdbc-url>jdbc:mariadb://localhost:3306/ensadb</jdbc-url>
+      <working-dir>$ProjectFileDir$</working-dir>
+    </data-source>
+  </component>
+</project>

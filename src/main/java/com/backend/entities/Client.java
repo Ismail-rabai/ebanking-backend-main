@@ -41,9 +41,8 @@ public @Data class Client  extends Utilisateur{
 	@Column(name="COMPTES_CLIENT")
 	@OneToMany(mappedBy="proprietaire",cascade=CascadeType.ALL)
 	List<Compte> comptes;
-
-	@JsonIgnore
-	@OneToOne( cascade = CascadeType.ALL)
+	@JoinColumn(name = "rendezvous_id",referencedColumnName = "id")
+	@OneToOne
 	RendezVous rendezVous;
 
 }

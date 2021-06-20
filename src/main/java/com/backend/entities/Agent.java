@@ -31,10 +31,9 @@ public @Data class Agent extends Utilisateur{
 	@ManyToOne
 	Agence agence;
 
-
 	@JsonIgnore
 	@OneToMany(mappedBy = "agent", cascade = CascadeType.ALL)
-	List<RendezVous> RV;
+	List<RendezVous> rendezVouss;
 
 
 
